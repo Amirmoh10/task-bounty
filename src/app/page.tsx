@@ -1,16 +1,12 @@
 import Link from "next/link";
 
+import { Heading } from "@/components/heading";
 import { ticketsPath } from "@/paths";
 
-const HomePage = () => {
+export default function HomePage() {
   return (
     <div className="flex-1 flex flex-col gap-y-8">
-      <div>
-        <h2 className="text-3xl font-bold tracking-tight">Home</h2>
-        <p className="text-sm text-muted-foreground">
-          Your home place to start
-        </p>
-      </div>
+      <Heading title="Home" description="Your home place to start" />
 
       <div className="flex-1 flex flex-col items-center">
         <Link href={ticketsPath()} className="text-sm underline">
@@ -19,6 +15,4 @@ const HomePage = () => {
       </div>
     </div>
   );
-};
-
-export default HomePage;
+}
